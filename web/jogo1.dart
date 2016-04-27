@@ -80,14 +80,14 @@ void instrucoes(){
   balao2 = new DivElement() ..id="balao2" ..className="balao2"; 
   querySelector('#tela_jogo').children.add(balao2);
   instru = new DivElement() ..id="instru";
-  instru.text = '''Olá eu sou Pedro, dono de uma fazenda muito grande. 
-Moro na companhia da minha esposa e de muitos animais. 
-Com o passar do tempo, meus animais tiveram vários filhotes e meu dinheiro para comprar alimento para eles, estava começando a faltar.
-Então olhei para um espaço onde havia muito mato, ervas-daninhas e cipós e tive uma grande idéia:
-- Vou plantar o alimento dos meus bichos de estimação! Assim todos terão seu alimento e quem sabe, eu possa até vender alguns vegetais. 
-Decidi! Irei plantar couve, alface, milho e cenoura para meus amiguinhos comerem e naquele espaço, plantarei melância, pois adoro chupar melância!
-Vamos lá, me ajude nessa tarefa!
-Clique na seta para iniciar.''';
+  instru.text = '''Hello, my name is Pedro. I am the owner of a really big farm. 
+I live with my wife and I have a lot of animals. 
+As the time passed, my animals procreated a lot and the money I had to buy them food was not enough anymore.
+But then I saw an area full of bushes and I came up with a great ideia:
+- I will plant the food to feed my animals on that area! By doing so, all of them will be fed and maybe I can even sell some vegetables. 
+I have made my mind! I will plant kale, lettuce, corn and carrots on that area to feed my animals. I will also plant watermelons, because I love watermelon!
+Let's go, help me on this task!
+Click on the arrow to begin.''';
   balao2.children.add(instru);
   continuar = new ButtonElement() ..id="continuar";
   querySelector('#tela_jogo').children.add(continuar);
@@ -174,7 +174,7 @@ void defineVidas(){
 void geraPaginaFinal(Event e){
   defineVidas();
   botoes.remove();
-  frases.text = "Muito bem! Você Venceu! Obrigado por ter ajudado a cuidar da minha roça!";
+  frases.text = "Very well! You won! Thanks for helping me to take care of my farm!";
   querySelector('#tela_jogo').children.add(jogarNovamente);
   jogarNovamente.onClick.listen((event)=>novamente());
 }
@@ -182,7 +182,7 @@ void geraPaginaFinal(Event e){
 void gameOverPage(){
   imgvidas.remove();
   botoes.remove();
-  //frases.text = "Você Perdeu!";
+  //frases.text = "You lost!";
   querySelector('#tela_jogo').children.add(tentarNovamente);
   tentarNovamente.onClick.listen((event)=>novamente());
 }
